@@ -30,7 +30,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         //get views
         mMovieNameTextView = (TextView) findViewById(R.id.activity_second_movie_name_textview);
-        mMovieYearTextView = (TextView) findViewById(R.id.activity_main_movie_year_edittext);
+        mMovieYearTextView = (TextView) findViewById(R.id.activity_second_movie_year_textview);
         mMovieTypeTextView = (TextView) findViewById(R.id.activity_second_movie_type_textview);
         
         Bundle extra = getIntent().getExtras();
