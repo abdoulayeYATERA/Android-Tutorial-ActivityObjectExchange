@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //create Movie instance from edit texts
-                //we create 50 copies of the same movie the efficiency of this
+                //we create and send 100 copies of the movie to test the efficiency of this
                 //data transfer method
                 ArrayList<Movie> movieToSendArray = new ArrayList<Movie>();
                 String movieToSendName = mNewMovieNameEditText.getText().toString();
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         && movieToSendType != null && !movieToSendType.isEmpty()
                         && movieToSendYear > 0) {
                     //the form is correctly completed
-                    for (int i = 0; i < 50; i++) {
+                    for (int i = 0; i < 100; i++) {
                         Movie movieToSend = new Movie();
                         movieToSend.setmName(movieToSendName);
                         movieToSend.setmType(movieToSendType);
