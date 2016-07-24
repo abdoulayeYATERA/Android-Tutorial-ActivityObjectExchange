@@ -1,5 +1,8 @@
 package com.yadevapp.activityobjectexchangetutorial.element;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 /**
@@ -8,7 +11,7 @@ import java.io.Serializable;
  * it implement "Serializable" to be able to pass instance through intents
  * Serialization permitted an instance to be transformed into a byteArray
  */
-public class Movie implements Serializable {
+public class Movie implements Parcelable {
     private final String TAG = getClass().getSimpleName();
 
     private String mName;
@@ -16,6 +19,12 @@ public class Movie implements Serializable {
     private String mType;
     private int mDuration;
     private int mStarsNumber;
+
+    //constructor
+
+    public Movie() {
+
+    }
 
     //getters
 
@@ -60,4 +69,58 @@ public class Movie implements Serializable {
     public void setmStarsNumber(int mStarsNumber) {
         this.mStarsNumber = mStarsNumber;
     }
+
+    //parcelable
+
+
+    /**
+     * Movie creator, from parcel
+     */
+    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+        @Override
+        public Movie createFromParcel(Parcel in) {
+            return new Movie(in);
+        }
+
+        @Override
+        public Movie[] newArray(int size) {
+            return new Movie[size];
+        }
+    };
+
+    /**
+     * Movie constructor from parcel
+     * Be careful ! the variables read and write order must be the same !!!!
+     * see {@link Movie#writeToParcel(Parcel, int)}
+     * @param in
+     */
+    protected Movie(Parcel in) {
+        mName = in.readString();
+        mYear = in.readInt();
+        mType = in.readString();
+        mDuration = in.readInt();
+        mStarsNumber = in.readInt();
+    }
+
+    /**
+     * write to parcel
+     * Be careful ! the variables read and write order must be the same !!!
+     * {@link Movie#Movie(Parcel)}
+     * @param parcel
+     * @param i
+     */
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mName);
+        parcel.writeInt(mYear);
+        parcel.writeString(mType);
+        parcel.writeInt(mDuration);
+        parcel.writeInt(mStarsNumber);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
 }

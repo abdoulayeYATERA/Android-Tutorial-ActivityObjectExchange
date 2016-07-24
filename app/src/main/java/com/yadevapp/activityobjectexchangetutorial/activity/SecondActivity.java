@@ -42,7 +42,7 @@ public class SecondActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
             return;
         }
-        ArrayList<Movie> movieArrayList = (ArrayList<Movie>) extra.getSerializable(IntentConstant.KEY_MOVIE);
+        ArrayList<Movie> movieArrayList = extra.getParcelableArrayList(IntentConstant.KEY_MOVIE);
         Log.d(TAG, "movieArray received");
         
         if (movieArrayList == null || movieArrayList.size() < 1) {
