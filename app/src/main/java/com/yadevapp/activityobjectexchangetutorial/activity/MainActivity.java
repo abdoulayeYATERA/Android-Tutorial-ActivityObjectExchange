@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "send movieArray start");
                     Intent secondActivityIntent = new Intent(MainActivity.this, SecondActivity.class);
                     secondActivityIntent.putExtra(IntentConstant.KEY_MOVIE, movieToSendArray);
+                    startActivity(secondActivityIntent);
                 } else {
                     //the form is not correctly completed
                     Toast.makeText(MainActivity.this,
