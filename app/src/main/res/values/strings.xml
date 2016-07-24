@@ -3,7 +3,7 @@
     <string name="new_movie_name_edittext_hint">Type movie name</string>
     <string name="new_movie_type_edittext_hint">Type movie type</string>
     <string name="new_movie_year_edittext_hint">Type movie year</string>
-    <string name="new_movie_add_button_text">Create Movie</string>
+    <string name="send_movie_add_button_text">Send Movie</string>
     <string name="wrong_form_toast_message">Please fill out all required fields</string>
     <string name="empty_intent_toast_message">Error :The received Intent is empty !</string>
     <string name="no_movie_received_toast_message">Error :No movie received !</string>
