@@ -3,13 +3,10 @@ package com.yadevapp.activityobjectexchangetutorial.element;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 /**
  * Created by abdoulaye  on 7/7/16.
  * class representing a movie
- * it implement "Serializable" to be able to pass instance through intents
- * Serialization permitted an instance to be transformed into a byteArray
+ * it implement Parcelable, wich is far more efficient than Serializable
  */
 public class Movie implements Parcelable {
     private final String TAG = getClass().getSimpleName();
