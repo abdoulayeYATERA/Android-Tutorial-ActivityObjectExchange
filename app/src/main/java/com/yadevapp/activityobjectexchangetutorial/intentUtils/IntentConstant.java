@@ -6,5 +6,6 @@ package com.yadevapp.activityobjectexchangetutorial.intentUtils;
  */
 public class IntentConstant {
     //key to send movie instance through an intent
-    public static String KEY_MOVIE = "movie";
+    public final static String KEY_RESULT = "result";
+    public final static int REQUEST_CODE = 1;
 }

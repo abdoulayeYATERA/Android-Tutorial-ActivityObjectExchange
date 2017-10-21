@@ -6,29 +6,15 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <EditText
-        android:id="@+id/activity_main_movie_name_edittext"
-        android:hint="@string/new_movie_name_edittext_hint"
+    <TextView
+        android:id="@+id/activity_main_textview"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/activity_main_movie_type_edittext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/new_movie_type_edittext_hint"/>
-
-    <EditText
-        android:id="@+id/activity_main_movie_year_edittext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="@string/new_movie_year_edittext_hint"/>
-
     <Button
-        android:id="@+id/activity_main_add_movie_button"
+        android:id="@+id/activity_main_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send_movie_add_button_text"/>
-
+        android:text="Start second Activity"/>
 </LinearLayout>
